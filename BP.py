@@ -23,7 +23,7 @@ trainingLabels = trainingLabels[:320]
 layer = [2, 3, 1]  # 设置层数和节点数
 Lambda = 0.005  # 正则化系数
 alpha = 0.2  # 学习速率
-num_passes = 10000  # 迭代次数
+num_passes = 20000  # 迭代次数
 m = len(trainingSet)  # 样本数量
 
 # 建立网络
