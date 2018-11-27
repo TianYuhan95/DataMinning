@@ -10,7 +10,7 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn.datasets import  load_iris
 
 iris = load_iris()  #加载数据
-X = iris.data[:,:2] #为方便画图，仅采用数据的其中两个特征
+X = iris.data[:, :2] #为方便画图，仅采用数据的其中两个特征
 Y = iris.target
 print iris.DESCR
 print iris.feature_names
@@ -28,7 +28,7 @@ xx,yy = np.meshgrid(np.arange(x_min,x_max,0.02),np.arange(y_min,y_max,0.02))
 Z = clf.predict(np.c_[xx.ravel(), yy.ravel()]).reshape(xx.shape)
 
 plt.figure()
-plt.pcolormesh(xx,yy,Z,cmap=cmap_bold)  #绘制预测结果图
+plt.pcolormesh(xx,yy,Z,cmap=cmap_ligth)  #绘制预测结果图
 
 plt.scatter(X[:,0],X[:,1],c=Y,cmap=cmap_bold) #补充训练点
 plt.xlim(xx.min(),xx.max())
